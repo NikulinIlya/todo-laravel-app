@@ -10,7 +10,7 @@ class TodosController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Todo[]|\Illuminate\Database\Eloquent\Collection
      */
     public function index()
     {
@@ -57,8 +57,9 @@ class TodosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Todo  $todo
+     * @param  \App\Todo $todo
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
     public function destroy(Todo $todo)
     {
